@@ -1,8 +1,6 @@
 "use client";
 
 import {
-  FaHtml5,
-  FaCss3,
   FaJs,
   FaReact,
   FaNodeJs,
@@ -20,7 +18,7 @@ import {
   SiAngular,
 } from "react-icons/si";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import {
   Tooltip,
@@ -31,7 +29,6 @@ import {
 import { Tabs, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { TabsList } from "@radix-ui/react-tabs";
-import ExperienceElement from "@/components/client/ExperienceElement";
 import React from "react";
 import TimelineContainer from "@/components/client/ui/TimelineContainer";
 
@@ -168,9 +165,6 @@ const skills = {
 };
 
 const Resume = () => {
-  const ref = React.useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]); // Preenchimento da linha
   return (
     <motion.div
       initial={{ opacity: 0 }}
