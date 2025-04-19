@@ -32,25 +32,25 @@ import { TabsList } from "@radix-ui/react-tabs";
 import React from "react";
 import TimelineContainer from "@/components/client/ui/TimelineContainer";
 
-const about = {
-  title: "Sobre mim",
-  description:
-    "Sou um desenvolvedor full stack com experiência em desenvolvimento web e backend, focado em criar soluções eficientes e escaláveis. Minha abordagem combina boas práticas de desenvolvimento, otimização de desempenho e arquitetura bem estruturada, garantindo aplicações robustas e de fácil manutenção.",
-  info: [
-    {
-      name: "Nome",
-      value: "Caio Lucas Silveira",
-    },
-    {
-      name: "Experiência",
-      value: "3+ Anos",
-    },
-    {
-      name: "Email",
-      value: "caiolsds@gmail.com",
-    },
-  ],
-};
+// const about = {
+//   title: "Sobre mim",
+//   description:
+//     "Sou um desenvolvedor full stack com experiência em desenvolvimento web e backend, focado em criar soluções eficientes e escaláveis. Minha abordagem combina boas práticas de desenvolvimento, otimização de desempenho e arquitetura bem estruturada, garantindo aplicações robustas e de fácil manutenção.",
+//   info: [
+//     {
+//       name: "Nome",
+//       value: "Caio Lucas Silveira",
+//     },
+//     {
+//       name: "Experiência",
+//       value: "3+ Anos",
+//     },
+//     {
+//       name: "Email",
+//       value: "caiolsds@gmail.com",
+//     },
+//   ],
+// };
 
 const experience = {
   icon: <FaFileAlt />,
