@@ -46,7 +46,7 @@ const info = [
 ];
 
 const Contact = () => {
-  // @ts-ignore
+  // @ts-expect-error
   const [state, formAction] = useFormState<any>(sendEmail, initialState);
   return (
     <motion.section
