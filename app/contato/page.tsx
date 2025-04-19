@@ -1,17 +1,11 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useFormState } from "react-dom";
 import { sendEmail } from "../actions/sendEmail";
 
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
 import { motion } from "framer-motion";
 import Link from "next/link";

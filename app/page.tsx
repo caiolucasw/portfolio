@@ -1,7 +1,6 @@
 import Photo from "@/components/client/ui/Photo";
 import Socials from "@/components/client/ui/Socials";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 

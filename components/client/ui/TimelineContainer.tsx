@@ -1,8 +1,7 @@
 // components/Timeline.tsx
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const experiences = [
   { title: "Desenvolvedor Júnior", company: "Empresa A", date: "2021 - 2022" },
@@ -15,16 +14,8 @@ const experiences = [
 ];
 
 export default function Timeline({ experiences }: any) {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start center", "end center"],
-  });
-
-  const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
   return (
-    <div className="relative mx-auto xl:mx-0 max-w-3xl " ref={containerRef}>
+    <div className="relative mx-auto xl:mx-0 max-w-3xl ">
       <div className="flex flex-col gap-12">
         {experiences?.map((exp: any, idx: any) => (
           <motion.div
