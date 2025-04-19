@@ -188,10 +188,10 @@ const Resume = () => {
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold text-center lg:text-start ">
+                <h3 className="text-4xl font-bold text-center xl:text-start ">
                   {experience.title}
                 </h3>
-                <p className="max-w-full text-white/60 mx-auto xl:mx-0 text-center lg:text-start ">
+                <p className="max-w-full text-white/60 mx-auto xl:mx-0 text-center xl:text-start ">
                   {experience.description}
                 </p>
                 <section className="py-8 text-white">
@@ -208,7 +208,11 @@ const Resume = () => {
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => (
-                      <li
+                      <motion.li
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        viewport={{ once: true }}
                         key={index}
                         className="flex flex-col justify-center items-center bg-[#232329] h-[184px] py-6 px-10 rounded-xl lg:items-start gap-1"
                       >
@@ -219,7 +223,7 @@ const Resume = () => {
                         <div className="flex">
                           <p className="text-white/60">{item.institution}</p>
                         </div>
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
                 </ScrollArea>
@@ -234,7 +238,13 @@ const Resume = () => {
                   </p>
                   <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[30px] mt-4">
                     {skills.items.map((item, index) => (
-                      <li key={index}>
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.02 }}
+                        viewport={{ once: true }}
+                      >
                         <TooltipProvider delayDuration={100000}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] hover:text-accent  bg-[#232329] rounded-xl flex justify-center items-center">
@@ -247,7 +257,7 @@ const Resume = () => {
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
                 </div>

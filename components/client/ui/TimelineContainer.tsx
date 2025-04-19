@@ -23,7 +23,7 @@ export default function Timeline({ experiences }: any) {
               <span className="text-xs text-accent">{exp.period}</span>
             </div>
             <div>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-outside p-4 xl:list-none">
                 {exp?.assignments.map((assignment: any, index: number) => (
                   <motion.li
                     key={index}
@@ -33,7 +33,7 @@ export default function Timeline({ experiences }: any) {
                     viewport={{ once: true }}
                     className="gap-2 mt-2 marker:text-accent"
                   >
-                    <p className="inline-block">{assignment}</p>
+                    <p className="block">{assignment}</p>
                   </motion.li>
                 ))}
               </ul>

@@ -57,7 +57,7 @@ const Contact = () => {
       }}
       className="py-6"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto p-4 xl:p-0">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[55%] order-2 xl:order-none">
             {state.success ? (

@@ -19,7 +19,7 @@ const Photo = () => {
           transition={{ delay: 1.4, duration: 1.5, ease: "easeInOut" }}
           className="w-full h-full flex justify-center items-center"
         >
-          <div className="w-[400px] h-[349px] mix-blend-lighten relative border border-accent/30 border-dashed">
+          <div className="w-[350px] h-[307px] md:w-[400px] md:h-[349px] mix-blend-lighten relative border border-accent/30 border-dashed">
             <Image
               src="/assets/caio-perfil.png"
               priority

@@ -6,7 +6,7 @@ import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
   return (
-    <section className="h-full">
+    <section className="h-full p-4 xl:p-0">
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
         <div className="order-2 xl:order-1 xl:flex-grow">
           <div className="text-center xl:text-center">
