@@ -3,16 +3,6 @@
 
 import { motion } from "framer-motion";
 
-const experiences = [
-  { title: "Desenvolvedor Júnior", company: "Empresa A", date: "2021 - 2022" },
-  { title: "Desenvolvedor Pleno", company: "Empresa B", date: "2022 - 2023" },
-  {
-    title: "Desenvolvedor Sênior",
-    company: "Empresa C",
-    date: "2023 - Atualmente",
-  },
-];
-
 export default function Timeline({ experiences }: any) {
   return (
     <div className="relative mx-auto xl:mx-0 max-w-3xl ">
