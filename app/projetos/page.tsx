@@ -103,7 +103,7 @@ const projects = [
         icon: <SiSwagger className="text-cl" />,
       },
     ],
-    image: "/projects/api-rest.png",
+    image: "/projects/api-rest.webp",
     github: "https://github.com/caiolucasw/medsilveira",
   },
 ];
@@ -120,8 +120,8 @@ const Work = () => {
       className="min-h-[80vh] flex flex-col  justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto px-4 xl:px-0">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+        <div className="flex flex-col xl:flex-row xl:gap-[30px] relative sm:static">
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-1 sm:order-2 xl:order-none">
             <div>
               <div className="text-7xl leading-none font-extrabold text-outline text-accent">
                 {project.num}
@@ -163,7 +163,7 @@ const Work = () => {
           </div>
           <div className="w-full xl:w-[50%]">
             <Swiper
-              className="xl:h-[520px] mb-12"
+              className="xl:h-[520px] mb-12 swiperCustom"
               spaceBetween={50}
               slidesPerView={1}
               onSlideChange={(swiper) => {
@@ -172,22 +172,26 @@ const Work = () => {
             >
               {projects.map((item, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-white/4 w-full p-2 shadow-2xl rounded-sm border-8 border-black/1">
+                  <div className="hidden  relative swiperCustom sm:h-[460px] group sm:flex justify-center items-center bg-white/4 w-full p-2 shadow-2xl rounded-sm border-8 border-black/1">
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10"></div>
                     <div>
                       <Image
                         src={item.image}
                         alt=""
                         fill
-                        className="object-fill object-center  transition-all duration-500 backdrop-blur-2xl"
+                        className="hidden sm:block object-fill object-center  transition-all duration-500 backdrop-blur-2xl"
                       />
                     </div>
                   </div>
                 </SwiperSlide>
               ))}
               <SliderButtons
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%-22px)] xl:bottom-0 z-20 w-full justify-between wl:w-max xl:justify-none"
+                containerStyles="flex gap-2 absolute right-0 buttonCustom sm:bottom-[calc(50%-22px)] xl:bottom-0 z-20 w-full justify-between wl:w-max xl:justify-none"
                 btnStyles="bg-accent/50 text-white/50 hover:bg-accent hover:text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all cursor-pointer rounded-xl"
+                numSlides={projects.length}
+                disabledStyles="hover:bg-accent/50 cursor-not-allowed hover:text-white/50"
+                showCount={true}
+                iconsStyles="text-[22px] text-white/50 group-hover:text-primary transition-all duration-500"
               />
             </Swiper>
           </div>

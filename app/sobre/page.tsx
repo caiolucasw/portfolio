@@ -4,7 +4,6 @@ import {
   FaJs,
   FaReact,
   FaNodeJs,
-  FaFileAlt,
   FaUniversity,
   FaLaravel,
 } from "react-icons/fa";
@@ -31,6 +30,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { TabsList } from "@radix-ui/react-tabs";
 import React from "react";
 import TimelineContainer from "@/components/client/ui/TimelineContainer";
+import { experiences } from "@/utils/experiences";
 
 // const about = {
 //   title: "Sobre mim",
@@ -51,55 +51,6 @@ import TimelineContainer from "@/components/client/ui/TimelineContainer";
 //     },
 //   ],
 // };
-
-const experience = {
-  icon: <FaFileAlt />,
-  title: "Experiência",
-  description:
-    "Sou um desenvolvedor full stack com experiência em desenvolvimento web e backend, focado em criar soluções eficientes e escaláveis. Minha abordagem combina boas práticas de desenvolvimento, otimização de desempenho e arquitetura bem estruturada, garantindo aplicações robustas e de fácil manutenção.",
-  items: [
-    {
-      company: "SIGCORP",
-      position: "Desenvolvedor Full Stack Pleno",
-      period: "04/2024 - Atual",
-      assignments: [
-        "Desenvolvimento de APIs RESTful com Node.js e Express.",
-        "Integração com bancos de dados relacionais e não relacionais.",
-        "Colaboração em equipe ágil utilizando metodologias Scrum.",
-        "Implementação de testes automatizados para garantir a qualidade do código.",
-        "Participação em revisões de código e melhorias contínuas.",
-      ],
-    },
-    {
-      company: "Munddi Soluções em Tecnologia",
-      position: "Desenvolvedor Full Stack Jr.",
-      period: "06/2022 - 01/2024",
-      assignments: [
-        "Desenvolvimento de aplicações web utilizando React e Laravel.",
-        "Criação de APIs RESTful com Node.js e Express.",
-        "Integração com bancos de dados relacionais e não relacionais.",
-        "Colaboração em equipe ágil utilizando metodologias Scrum.",
-        "Implementação de testes automatizados para garantir a qualidade do código.",
-        "Participação em revisões de código e melhorias contínuas.",
-        "Desenvolvimento de aplicações web utilizando Angular e Spring Boot.",
-      ],
-    },
-    {
-      company: "Munddi Soluções em Tecnologia",
-      position: "Estagiário",
-      period: "08/2021 - 06/2022",
-      assignments: [
-        "Desenvolvimento de aplicações web utilizando React e Laravel.",
-        "Criação de APIs RESTful com Node.js e Express.",
-        "Integração com bancos de dados relacionais e não relacionais.",
-        "Colaboração em equipe ágil utilizando metodologias Scrum.",
-        "Implementação de testes automatizados para garantir a qualidade do código.",
-        "Participação em revisões de código e melhorias contínuas.",
-        "Desenvolvimento de aplicações web utilizando Angular e Spring Boot.",
-      ],
-    },
-  ],
-};
 
 const education = {
   icon: <FaUniversity />,
@@ -189,13 +140,13 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold text-center xl:text-start ">
-                  {experience.title}
+                  {experiences.title}
                 </h3>
                 <p className="max-w-full text-white/60 mx-auto xl:mx-0 text-center xl:text-start ">
-                  {experience.description}
+                  {experiences.description}
                 </p>
                 <section className="py-8 text-white">
-                  <TimelineContainer experiences={experience.items} />
+                  <TimelineContainer experiences={experiences.items} />
                 </section>
               </div>
             </TabsContent>

@@ -168,3 +168,13 @@
 .animationSlide {
   animation: animationSlider 10s linear infinite;
 }
+
+@media (max-width: 640px) {
+  .swiperCustom {
+    position: static !important;
+  }
+
+  .buttonCustom {
+    top: -20px;
+  }
+}
