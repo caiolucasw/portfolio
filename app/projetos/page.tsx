@@ -53,7 +53,7 @@ const projects = [
     ],
     image: "/projects/silv-properties.png",
     github: "https://github.com/caiolucasw/silv-properties",
-    live: "https://github.com",
+    live: "https://silv-properties.vercel.app/",
   },
   {
     num: "02",
