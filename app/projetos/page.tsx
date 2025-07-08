@@ -104,7 +104,7 @@ const projects = [
       },
     ],
     image: "/projects/api-rest.webp",
-    github: "https://github.com/caiolucasw/medsilveira",
+    github: "https://github.com/caiolucasw/med-silv",
   },
 ];
 
