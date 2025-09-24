@@ -19,14 +19,14 @@ const Photo = () => {
           transition={{ delay: 1.4, duration: 1.5, ease: "easeInOut" }}
           className="w-full h-full flex justify-center items-center"
         >
-          <div className="w-[350px] h-[307px] md:w-[400px] md:h-[349px] mix-blend-lighten relative border border-accent/30 border-dashed">
+          <div className="w-[350px] h-[468px] md:w-[340px] md:h-[400px]  mix-blend-lighten relative border border-accent/30 border-dashed">
             <Image
               src="/assets/caio-perfil.png"
               priority
               quality={100}
               fill
               alt="caio perfil"
-              className="object-contain"
+              className="object-cover object-top"
             />
             <div className="absolute inset-0 bg-[linear-gradient(to_top,_black_0%,_transparent_25%)]"></div>
           </div>
