@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 export type ProjectShowcaseProps = {
   index?: string; // e.g. "01"
@@ -15,7 +16,7 @@ export type ProjectShowcaseProps = {
   imageUrl?: string; // screenshot grande da aplicação
 };
 
-const defaultProps: Required<ProjectShowcaseProps> = {
+const defaultProps: ProjectShowcaseProps = {
   index: "01",
   label: "Projeto Full-Stack",
   title: "SILV – marketplace de aluguel",
@@ -83,12 +84,14 @@ function BrowserFrame({ src }: { src: string }) {
         <span className="h-2.5 w-2.5 rounded-full bg-green-400/70" />
         <div className="ml-4 h-6 flex-1 rounded-md bg-white/5 ring-1 ring-white/10" />
       </div>
-      <img
-        src={src}
-        alt="Screenshot do projeto"
-        className="block w-full h-auto"
-        loading="lazy"
-      />
+      <div>
+        <Image
+          src={src}
+          alt="Screenshot do projeto"
+          className="block w-full h-auto"
+          loading="lazy"
+        />
+      </div>
     </div>
   );
 }
@@ -134,7 +137,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
 
           {/* bullets */}
           <ul className="mt-6 space-y-2 text-sm/7 text-white/75">
-            {bullets.map((b, i) => (
+            {bullets?.map((b, i) => (
               <li key={i} className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white/60" />
                 <span>{b}</span>
@@ -160,7 +163,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
 
           {/* badges de tecnologia */}
           <div className="mt-6 flex flex-wrap gap-2">
-            {badges.map((tech) => (
+            {badges?.map((tech) => (
               <TechBadge key={tech} label={tech} />
             ))}
           </div>
@@ -178,7 +181,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
               className=""
             >
-              <BrowserFrame src={imageUrl} />
+              {imageUrl && <BrowserFrame src={imageUrl} />}
             </motion.div>
           </motion.div>
         </div>
