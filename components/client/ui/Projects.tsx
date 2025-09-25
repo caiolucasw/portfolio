@@ -87,6 +87,8 @@ function BrowserFrame({ src }: { src: string }) {
       <div>
         <Image
           src={src}
+          width={1200}
+          height={800}
           alt="Screenshot do projeto"
           className="block w-full h-auto"
           loading="lazy"
