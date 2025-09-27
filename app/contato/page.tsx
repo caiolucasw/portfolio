@@ -17,7 +17,6 @@ const initialState = { success: false, error: "" };
 const messageStr =
   "Olá, Caio. Gostaria de saber mais sobre o seu trabalho. Podemos conversar?";
 const messageStrEncoded = encodeURIComponent(messageStr);
-console.log(messageStr, messageStrEncoded);
 const whatsappLink = `https://wa.me/5511956597684?text=${messageStrEncoded}`;
 
 const info = [
@@ -53,7 +52,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 0.4, duration: 0.5, ease: "easeIn" },
+        transition: { delay: 0.1, duration: 0.1, ease: "easeIn" },
       }}
       className="py-6"
     >
